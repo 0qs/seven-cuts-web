@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-[90vh] px-4 py-32 overflow-hidden text-center">
+    <section className="relative flex flex-col items-center justify-center min-h-screen px-4 pt-24 pb-16 overflow-hidden text-center">
       {/* Nav Logo */}
       <div className="absolute top-6 left-6 z-20">
         <Image
@@ -24,23 +24,18 @@ export default function Hero() {
         <div className="absolute top-1/3 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-purple-400/20 blur-[100px] rounded-full mix-blend-multiply opacity-50"></div>
       </div>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10 max-w-4xl mx-auto space-y-8"
       >
-        <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/50 backdrop-blur-md text-zinc-600 text-sm font-medium border border-zinc-200/60 shadow-sm mb-4">
-          <span className="flex w-2 h-2 rounded-full bg-green-500 mr-2"></span>
-          Available for new projects
-        </div>
-        
         <h1 className="text-6xl md:text-8xl font-bold tracking-tight text-zinc-900 text-balance">
           Visual stories that <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-purple-600">captivate.</span>
         </h1>
-        
+
         <p className="text-lg md:text-xl text-zinc-500 max-w-2xl mx-auto text-balance">
-          Seven Cuts Media crafts premium digital experiences and sales-driven media that elevate your brand to the next level.
+          Sevencuts crafts premium digital experiences and sales-driven media that elevate your brand to the next level.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
@@ -49,7 +44,7 @@ export default function Hero() {
             Ready to collaborate?
             <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
           </button>
-          
+
           <button className="px-8 py-4 font-medium text-zinc-700 transition-colors bg-white/50 backdrop-blur-md border border-zinc-200 rounded-full hover:bg-white shadow-[0_4px_14px_0_rgba(0,0,0,0.05)]">
             View our work
           </button>
