@@ -39,13 +39,19 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
-          <button className="group relative inline-flex items-center justify-center px-8 py-4 font-medium text-white transition-all bg-zinc-900 rounded-full hover:-translate-y-1 hover:shadow-xl hover:shadow-zinc-900/20 overflow-hidden">
+          <button 
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            className="group relative inline-flex items-center justify-center px-8 py-4 font-medium text-white transition-all bg-zinc-900 rounded-full hover:-translate-y-1 hover:shadow-xl hover:shadow-zinc-900/20 overflow-hidden"
+          >
             <span className="absolute inset-0 w-full h-full border border-white/20 rounded-full pointer-events-none"></span>
             Ready to collaborate?
             <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
           </button>
 
-          <button className="px-8 py-4 font-medium text-zinc-700 transition-colors bg-white/50 backdrop-blur-md border border-zinc-200 rounded-full hover:bg-white shadow-[0_4px_14px_0_rgba(0,0,0,0.05)]">
+          <button 
+            onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+            className="px-8 py-4 font-medium text-zinc-700 transition-colors bg-white/50 backdrop-blur-md border border-zinc-200 rounded-full hover:bg-white shadow-[0_4px_14px_0_rgba(0,0,0,0.05)]"
+          >
             View our work
           </button>
         </div>

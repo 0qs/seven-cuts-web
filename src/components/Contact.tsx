@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Contact() {
   return (
-    <footer className="bg-zinc-900 text-zinc-400 py-32 px-4 overflow-hidden relative">
+    <footer id="contact" className="bg-zinc-900 text-zinc-400 py-32 px-4 overflow-hidden relative">
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-zinc-700 to-transparent"></div>
       
       <div className="max-w-6xl mx-auto space-y-32">
@@ -34,9 +34,9 @@ export default function Contact() {
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-zinc-800 text-sm">
           <p>© {new Date().getFullYear()} Seven Cuts Media. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white transition-colors">Twitter</a>
-            <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
-            <a href="#" className="hover:text-white transition-colors">Instagram</a>
+            <a href="#" rel="noopener noreferrer" className="hover:text-white transition-colors">Twitter</a>
+            <a href="#" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
+            <a href="#" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
           </div>
         </div>
         

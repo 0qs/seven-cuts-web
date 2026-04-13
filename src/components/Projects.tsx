@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const PROJECTS = [
   {
@@ -28,7 +29,7 @@ const PROJECTS = [
 
 export default function Projects() {
   return (
-    <section className="py-32 px-4 bg-zinc-50 border-t border-zinc-200/50 relative overflow-hidden">
+    <section id="projects" className="py-32 px-4 bg-zinc-50 border-t border-zinc-200/50 relative overflow-hidden">
       <div className="max-w-6xl mx-auto space-y-32">
         
         <div className="text-center max-w-2xl mx-auto">
@@ -50,7 +51,7 @@ export default function Projects() {
                 <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 ${project.color} blur-[80px] mix-blend-multiply rounded-full opacity-60 transition-opacity group-hover:opacity-100`}></div>
                 
                 <div className="relative aspect-[4/3] rounded-[2.5rem] overflow-hidden border border-zinc-200/50 shadow-2xl bg-white isolate">
-                  <img src={project.image} alt={project.title} className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105" />
+                  <Image src={project.image} alt={project.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
                   
                   <div className="absolute top-4 left-4 backdrop-blur-md bg-white/60 border border-white/60 shadow-sm px-4 py-2 rounded-full text-sm font-medium text-zinc-800">
                     {project.category}
