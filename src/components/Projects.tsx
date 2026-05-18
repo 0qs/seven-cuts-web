@@ -59,9 +59,6 @@ function VideoCard({ src, index }: { src: string; index: number }) {
         </div>
       </div>
 
-      <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-sm border border-white/10 px-3 py-1 rounded-full text-xs font-medium text-white/70">
-        #{index + 2}
-      </div>
     </motion.div>
   );
 }
@@ -80,7 +77,7 @@ export default function Projects() {
         >
           <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500 mb-4">Portfolio</p>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-white">Our Work</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white">Our Portfolio</h2>
             <p className="text-zinc-500 max-w-sm">Hover to preview. A selection of cuts we&apos;re proud of.</p>
           </div>
         </motion.div>

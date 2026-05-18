@@ -3,17 +3,16 @@
 import { motion } from "framer-motion";
 
 const STATS = [
+  { value: "20+", label: "Clients Managed" },
+  { value: "500+", label: "Videos Produced" },
   { value: "1M+", label: "Views Generated" },
-  { value: "30+", label: "Videos / Month" },
-  { value: "3", label: "Platforms Covered" },
-  { value: "24/7", label: "Marketing Support" },
 ];
 
 export default function Stats() {
   return (
     <section className="border-t border-white/5 bg-[#0d0d0d]">
       <div className="max-w-6xl mx-auto px-6 md:px-12 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-4">
           {STATS.map((stat, i) => (
             <motion.div
               key={stat.label}

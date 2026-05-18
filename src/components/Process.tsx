@@ -41,9 +41,9 @@ export default function Process() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500 mb-4">How it works</p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500 mb-4">Workflow</p>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-white">A proven process.</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white">Our workflow.</h2>
             <p className="text-zinc-500 max-w-sm">From first brief to lasting growth — every step counts.</p>
           </div>
         </motion.div>

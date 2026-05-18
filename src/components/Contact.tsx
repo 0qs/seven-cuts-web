@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { MapPin } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -39,13 +40,20 @@ export default function Contact() {
         </motion.div>
 
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/5 text-sm text-zinc-600">
-          <p>© {new Date().getFullYear()} Seven Cuts Media. All rights reserved.</p>
+          <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
+            <p>© {new Date().getFullYear()} Seven Cuts Media. All rights reserved.</p>
+            <span className="hidden md:block text-zinc-700">·</span>
+            <span className="flex items-center gap-1.5">
+              <MapPin className="w-3.5 h-3.5 flex-shrink-0" />
+              Apt Cinere Resort, Kintamani 10th Floor
+            </span>
+          </div>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" rel="noopener noreferrer" className="hover:text-white transition-colors">Twitter</a>
-            <a href="#" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
-            <a href="#" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
+            <a href="https://www.linkedin.com/company/sevencutsmedia/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
+            <a href="https://www.instagram.com/sevencutsmedia/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
           </div>
         </div>
+
       </div>
     </footer>
   );

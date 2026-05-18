@@ -30,7 +30,7 @@ const PLANS = [
     cta: "Get started",
   },
   {
-    name: "Bespoke",
+    name: "Custom",
     price: "Let's talk",
     subtitle: "Tailored",
     features: [
@@ -72,11 +72,12 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`relative rounded-2xl p-7 flex flex-col gap-7 ${
-                plan.highlight
+              className={`relative rounded-2xl p-7 flex flex-col gap-7 ${plan.highlight
                   ? "bg-white text-zinc-900 shadow-[0_0_60px_rgba(255,255,255,0.08)]"
-                  : "bg-[#111] border border-white/8"
-              }`}
+                  : plan.custom
+                    ? "bg-[#111] border border-white/8 overflow-hidden"
+                    : "bg-[#111] border border-white/8"
+                }`}
             >
               {plan.highlight && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-orange-500 to-purple-600 text-white text-xs font-semibold tracking-wide shadow-lg">
@@ -85,7 +86,7 @@ export default function Pricing() {
               )}
 
               {plan.custom && (
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-orange-400/50 via-purple-500/50 to-transparent rounded-t-2xl" />
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-orange-400/50 via-purple-500/50 to-transparent" />
               )}
 
               <div className="space-y-1.5">
@@ -96,11 +97,10 @@ export default function Pricing() {
                   </p>
                 </div>
                 <div className="flex items-end gap-1">
-                  <span className={`font-bold tracking-tight leading-none ${
-                    plan.custom
+                  <span className={`font-bold tracking-tight leading-none ${plan.custom
                       ? "text-2xl text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500"
                       : `text-4xl ${plan.highlight ? "text-zinc-900" : "text-white"}`
-                  }`}>
+                    }`}>
                     {plan.price}
                   </span>
                   {!plan.custom && (
@@ -115,9 +115,8 @@ export default function Pricing() {
               <ul className="space-y-2.5 flex-1">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3">
-                    <Check className={`w-4 h-4 mt-0.5 flex-shrink-0 ${
-                      plan.highlight ? "text-zinc-900" : plan.custom ? "text-purple-400" : "text-orange-400"
-                    }`} />
+                    <Check className={`w-4 h-4 mt-0.5 flex-shrink-0 ${plan.highlight ? "text-zinc-900" : plan.custom ? "text-purple-400" : "text-orange-400"
+                      }`} />
                     <span className={`text-sm leading-snug ${plan.highlight ? "text-zinc-700" : "text-zinc-400"}`}>
                       {feature}
                     </span>
@@ -127,13 +126,12 @@ export default function Pricing() {
 
               <button
                 onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-                className={`group inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-xl font-semibold text-sm transition-all ${
-                  plan.highlight
+                className={`group inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-xl font-semibold text-sm transition-all ${plan.highlight
                     ? "bg-zinc-900 text-white hover:bg-zinc-800"
                     : plan.custom
-                    ? "bg-gradient-to-r from-orange-500 to-purple-600 text-white hover:opacity-90"
-                    : "bg-white/10 text-white hover:bg-white/15 border border-white/10"
-                }`}
+                      ? "bg-gradient-to-r from-orange-500 to-purple-600 text-white hover:opacity-90"
+                      : "bg-white/10 text-white hover:bg-white/15 border border-white/10"
+                  }`}
               >
                 {plan.cta}
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
