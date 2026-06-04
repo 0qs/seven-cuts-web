@@ -47,6 +47,7 @@ function VideoCard({ src, index }: { src: string; index: number }) {
           loop
           playsInline
           preload="metadata"
+          aria-label={`Seven Cuts Media short form video portfolio example ${index + 1}`}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
       </div>
@@ -77,8 +78,8 @@ export default function Projects() {
         >
           <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500 mb-4">Portfolio</p>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-white">Our Portfolio</h2>
-            <p className="text-zinc-500 max-w-sm">Hover to preview. A selection of cuts we&apos;re proud of.</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white">Short Form Video Portfolio</h2>
+            <p className="text-zinc-500 max-w-sm">Hover to preview. A selection of short form video cuts we&apos;re proud of.</p>
           </div>
         </motion.div>
 

@@ -21,7 +21,7 @@ export default function Growth() {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
 
-          {/* Left — copy */}
+          {/* Left, copy */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -43,7 +43,7 @@ export default function Growth() {
             </p>
           </motion.div>
 
-          {/* Right — growth card */}
+          {/* Right, growth card */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}

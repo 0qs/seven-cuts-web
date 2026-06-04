@@ -4,6 +4,10 @@
   --font-sans: var(--font-poppins);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #080808;
   color: #ffffff;
