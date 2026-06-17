@@ -11,7 +11,7 @@ const ARTICLES = {
     description: "Stop the scroll with these proven hook structures that increase retention instantly.",
     content: `
       <h2>Why Hooks Are the Most Important Part of Short Form Video</h2>
-      <p>The first three seconds of any short form video determine whether a viewer keeps watching or swipes away. On TikTok, Instagram Reels, and YouTube Shorts, the algorithm measures your "swipe-away rate" and rewards content that holds attention. A strong hook is the single most impactful element a short form video agency can optimise for a client.</p>
+      <p>The first three seconds of any short form video determine whether a viewer keeps watching or swipes away. On TikTok, Instagram Reels, and YouTube Shorts, the algorithm measures your "swipe-away rate" and rewards content that holds attention. A strong hook is the single most impactful element a short form content agency can optimise for a client.</p>
 
       <h2>The 10 Best TikTok Hook Frameworks in 2026</h2>
       <ul>
@@ -37,13 +37,13 @@ const ARTICLES = {
     author: "Seven Cuts Team"
   },
   "how-much-does-a-short-form-agency-cost": {
-    title: "How Much Does a Short Form Video Agency Cost?",
+    title: "How Much Does a Short Form Content Agency Cost?",
     description: "A complete breakdown of pricing models, ROI, and what you should expect to pay.",
     content: `
-      <h2>Why Brands Hire a Short Form Video Agency</h2>
-      <p>Organic short form video is one of the highest-ROI marketing channels available today. TikTok, Instagram Reels, and YouTube Shorts together deliver billions of impressions daily, at zero media spend. But producing consistently high-quality short form video requires creative strategy, professional editing, trend awareness, and platform-specific expertise. That's why brands and creators partner with a short form video agency like Seven Cuts Media.</p>
+      <h2>Why Brands Hire a Short Form Content Agency</h2>
+      <p>Organic short form video is one of the highest-ROI marketing channels available today. TikTok, Instagram Reels, and YouTube Shorts together deliver billions of impressions daily, at zero media spend. But producing consistently high-quality short form video requires creative strategy, professional editing, trend awareness, and platform-specific expertise. That's why brands and creators partner with a short form content agency like Seven Cuts Media.</p>
 
-      <h2>Short Form Video Agency Pricing Models</h2>
+      <h2>Short Form Content Agency Pricing Models</h2>
       <ul>
         <li><strong>Retainer (most common):</strong> A monthly fee covering a fixed volume of videos, strategy, and distribution. Typical range: $1,500–$8,000/month depending on output and platforms.</li>
         <li><strong>Per-video pricing:</strong> Clients pay per edited video, usually $150–$600 per piece. Good for one-off campaigns or testing an agency before committing to a retainer.</li>
@@ -52,7 +52,7 @@ const ARTICLES = {
       </ul>
 
       <h2>What Affects the Price?</h2>
-      <p>Several factors determine what a short form video agency charges. Output volume (how many videos per month), platform count (TikTok only vs. TikTok + Reels + Shorts), creative complexity (user-generated style vs. studio-produced), and whether strategy and analytics are included all move the needle on price.</p>
+      <p>Several factors determine what a short form content agency charges. Output volume (how many videos per month), platform count (TikTok only vs. TikTok + Reels + Shorts), creative complexity (user-generated style vs. studio-produced), and whether strategy and analytics are included all move the needle on price.</p>
 
       <h2>How to Calculate ROI</h2>
       <p>A well-run short form video strategy typically pays for itself through organic reach and lead generation within 90 days. Compare the cost of paid social ads to reach the same audience, short form video almost always wins on a cost-per-view and cost-per-lead basis. Seven Cuts Media clients regularly see 10x organic reach versus their previous paid spend.</p>
@@ -202,7 +202,7 @@ export default async function ArticlePage({ params }: Props) {
         />
 
         <div className="mt-16 pt-12 border-t border-white/10">
-          <p className="text-zinc-400 mb-6">Want results like this for your brand? Seven Cuts Media is a short form video agency ready to help you grow.</p>
+          <p className="text-zinc-400 mb-6">Want results like this for your brand? Seven Cuts Media is a short form content agency ready to help you grow.</p>
           <Link
             href="/#contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-zinc-100 transition-all"

@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Short Form Video Articles & Insights | Seven Cuts Media",
-  description: "Expert strategies, tips, and insights on short form video content, TikTok growth, YouTube Shorts, and viral marketing from Seven Cuts Media, the short form video agency.",
+  description: "Expert strategies, tips, and insights on short form video content, TikTok growth, YouTube Shorts, and viral marketing from Seven Cuts Media, the short form content agency.",
   alternates: {
     canonical: "https://sevencutsmedia.com/articles",
   },
@@ -22,7 +22,7 @@ const ARTICLES = [
   },
   {
     slug: "how-much-does-a-short-form-agency-cost",
-    title: "How Much Does a Short Form Video Agency Cost?",
+    title: "How Much Does a Short Form Content Agency Cost?",
     description: "A complete breakdown of pricing models, ROI, and what you should expect to pay.",
     date: "May 10, 2026",
     category: "Business"
@@ -44,7 +44,7 @@ export default function ArticlesPage() {
         <header className="mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Short Form Video Articles &amp; Insights</h1>
           <p className="text-lg text-zinc-400">
-            Expert strategies, tips, and insights on short form video content, TikTok growth, YouTube Shorts, and viral marketing, from Seven Cuts Media, the short form video agency.
+            Expert strategies, tips, and insights on short form video content, TikTok growth, YouTube Shorts, and viral marketing, from Seven Cuts Media, the short form content agency.
           </p>
         </header>
 
@@ -69,7 +69,7 @@ export default function ArticlesPage() {
         </div>
 
         <div className="mt-20 pt-12 border-t border-white/10 text-center">
-          <p className="text-zinc-400 mb-6">Ready to grow with a short form video agency that delivers results?</p>
+          <p className="text-zinc-400 mb-6">Ready to grow with a short form content agency that delivers results?</p>
           <Link
             href="/#contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-zinc-100 transition-all"

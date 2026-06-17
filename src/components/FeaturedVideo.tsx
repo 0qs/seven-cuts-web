@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function FeaturedVideo() {
   return (
-    <section className="relative w-full h-screen bg-black overflow-hidden">
+    <section className="relative w-full h-[100svh] bg-black overflow-hidden">
       <video
         src="/video/VIDEO-2026-04-14-20-36-27.mp4"
         autoPlay

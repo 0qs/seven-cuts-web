@@ -56,7 +56,7 @@ export default function Process() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.5, delay: (index % 3) * 0.08 }}
-              className="bg-[#0d0d0d] p-8 hover:bg-[#111] transition-colors duration-300 group"
+              className="bg-[#0d0d0d] p-6 sm:p-8 hover:bg-[#111] transition-colors duration-300 group"
             >
               <div className="flex items-start gap-5">
                 <span className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-orange-400 to-purple-500 leading-none flex-shrink-0">

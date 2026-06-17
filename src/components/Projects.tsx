@@ -15,18 +15,32 @@ const GRID_VIDEOS = [
 function VideoCard({ src, index }: { src: string; index: number }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
+  // Touch devices have no hover, so they use tap-to-play instead.
+  const [isTouch] = useState(
+    () =>
+      typeof window !== "undefined" &&
+      window.matchMedia("(hover: none)").matches
+  );
 
-  const handleMouseEnter = () => {
+  const play = () => {
     videoRef.current?.play();
     setPlaying(true);
   };
 
-  const handleMouseLeave = () => {
+  const stop = () => {
     if (videoRef.current) {
       videoRef.current.pause();
       videoRef.current.currentTime = 0;
     }
     setPlaying(false);
+  };
+
+  const handleTap = () => {
+    if (playing) {
+      stop();
+    } else {
+      play();
+    }
   };
 
   return (
@@ -36,8 +50,9 @@ function VideoCard({ src, index }: { src: string; index: number }) {
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.55, delay: (index % 3) * 0.07 }}
       className="group relative rounded-2xl overflow-hidden bg-zinc-900 cursor-pointer ring-1 ring-white/5 hover:ring-white/15 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(0,0,0,0.5)]"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onMouseEnter={isTouch ? undefined : play}
+      onMouseLeave={isTouch ? undefined : stop}
+      onClick={isTouch ? handleTap : undefined}
     >
       <div className="aspect-[9/16]">
         <video
@@ -79,7 +94,7 @@ export default function Projects() {
           <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500 mb-4">Portfolio</p>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
             <h2 className="text-4xl md:text-5xl font-bold text-white">Short Form Video Portfolio</h2>
-            <p className="text-zinc-500 max-w-sm">Hover to preview. A selection of short form video cuts we&apos;re proud of.</p>
+            <p className="text-zinc-500 max-w-sm">Tap or hover to preview. A selection of short form video cuts we&apos;re proud of.</p>
           </div>
         </motion.div>
 

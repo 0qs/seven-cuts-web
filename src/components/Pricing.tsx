@@ -64,7 +64,7 @@ export default function Pricing() {
           </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-4">
           {PLANS.map((plan, index) => (
             <motion.div
               key={plan.name}
@@ -72,7 +72,7 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`relative rounded-2xl p-7 flex flex-col gap-7 ${plan.highlight
+              className={`relative rounded-2xl p-6 sm:p-7 flex flex-col gap-7 ${plan.highlight
                   ? "bg-white text-zinc-900 shadow-[0_0_60px_rgba(255,255,255,0.08)]"
                   : plan.custom
                     ? "bg-[#111] border border-white/8 overflow-hidden"

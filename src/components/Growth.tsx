@@ -19,7 +19,7 @@ export default function Growth() {
   return (
     <section className="pt-12 pb-24 px-6 md:px-12 bg-[#0d0d0d] border-t border-white/5">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-12 items-center">
 
           {/* Left, copy */}
           <motion.div
@@ -39,7 +39,7 @@ export default function Growth() {
             </h2>
             <p className="text-zinc-400 leading-relaxed">
               No bots. No fake followers. Just <strong className="text-white font-semibold">real, organic growth</strong> that brings genuine fans who{" "}
-              <em>actually want</em> to see your content. As a specialized short form video agency, we use targeted strategies to attract the right audience, people who engage, tip, and subscribe month after month.
+              <em>actually want</em> to see your content. As a specialized short form content agency, we use targeted strategies to attract the right audience, people who engage, tip, and subscribe month after month.
             </p>
           </motion.div>
 
@@ -49,10 +49,10 @@ export default function Growth() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="bg-[#111] border border-white/8 rounded-2xl p-8"
+            className="bg-[#111] border border-white/8 rounded-2xl p-6 sm:p-8"
           >
             <p className="text-sm text-zinc-500 mb-2">Average Creator Growth</p>
-            <p className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 leading-none mb-1">
+            <p className="text-5xl sm:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 leading-none mb-1">
               +340%
             </p>
             <p className="text-sm text-zinc-500 mb-8">in first 90 days</p>

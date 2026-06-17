@@ -48,7 +48,7 @@ export default function WhyUs() {
           transition={{ duration: 0.6 }}
         >
           <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500 mb-4">About Us</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white">A short form video agency built to grow you.</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white">A short form content agency built to grow you.</h2>
         </motion.div>
 
         {/* Bio */}

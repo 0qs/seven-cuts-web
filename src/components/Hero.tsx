@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-20 pt-24 pb-20 overflow-hidden bg-[#080808]">
+    <section className="relative min-h-svh flex flex-col justify-center px-6 md:px-12 lg:px-20 pt-28 pb-20 overflow-hidden bg-[#080808]">
       <Navbar onHome />
 
       {/* Glow blobs */}
@@ -15,15 +15,15 @@ export default function Hero() {
         <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-purple-700/10 blur-[120px] rounded-full" />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto w-full space-y-8 text-center mx-auto">
+      <div className="relative z-10 max-w-5xl mx-auto w-full space-y-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
           className="space-y-8"
         >
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white leading-[1.02] text-balance">
-            The short form video agency that{" "}
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white leading-[1.05] sm:leading-[1.02] text-balance">
+            The short form content agency that{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500">
               captivates.
             </span>
@@ -36,14 +36,14 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 pt-2 justify-center">
             <a
               href="#contact"
-              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-zinc-100 transition-all hover:-translate-y-0.5 hover:shadow-[0_0_30px_rgba(255,255,255,0.15)]"
+              className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-zinc-100 transition-all hover:-translate-y-0.5 hover:shadow-[0_0_30px_rgba(255,255,255,0.15)]"
             >
               Start Growing
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
               href="#projects"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/15 text-white font-semibold rounded-full hover:bg-white/5 transition-all"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-8 py-4 border border-white/15 text-white font-semibold rounded-full hover:bg-white/5 transition-all"
             >
               View our work
             </a>
