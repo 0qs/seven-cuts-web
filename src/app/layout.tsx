@@ -15,11 +15,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Short Form Content Agency | Seven Cuts Media",
     description: "Seven Cuts Media is a premier short form content agency helping creators and brands achieve explosive organic growth through high-retention short form video content.",
-    url: "https://sevencutsmedia.com",
+    url: "https://www.sevencutsmedia.com",
     siteName: "Seven Cuts Media",
     images: [
       {
-        url: "https://sevencutsmedia.com/logo.png",
+        url: "https://www.sevencutsmedia.com/logo.png",
         width: 1200,
         height: 630,
         alt: "Seven Cuts Media, Short Form Content Agency",
@@ -32,10 +32,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Short Form Content Agency | Seven Cuts Media",
     description: "The premier short form content agency driving organic growth and viral success for creators and brands worldwide.",
-    images: ["https://sevencutsmedia.com/logo.png"],
+    images: ["https://www.sevencutsmedia.com/logo.png"],
   },
   alternates: {
-    canonical: "https://sevencutsmedia.com",
+    canonical: "https://www.sevencutsmedia.com",
   },
 };
 
@@ -58,8 +58,8 @@ export default function RootLayout({
       "alternateName": ["SevenCuts Media", "7 Cuts Media", "Sevencuts", "Sevencuts Media"],
       "description": "The premier short form content agency driving organic growth and viral success for creators and brands worldwide.",
       "serviceType": "Short Form Content Agency",
-      "url": "https://sevencutsmedia.com",
-      "logo": "https://sevencutsmedia.com/logo.png",
+      "url": "https://www.sevencutsmedia.com",
+      "logo": "https://www.sevencutsmedia.com/logo.png",
       "foundingLocation": {
         "@type": "Place",
         "name": "Indonesia"

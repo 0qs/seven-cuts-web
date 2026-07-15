@@ -110,7 +110,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${article.title} | Seven Cuts Media`,
     description: article.description,
     alternates: {
-      canonical: `https://sevencutsmedia.com/articles/${resolvedParams.slug}`,
+      canonical: `https://www.sevencutsmedia.com/articles/${resolvedParams.slug}`,
     },
     openGraph: {
       title: `${article.title} | Seven Cuts Media`,
@@ -118,7 +118,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       publishedTime: article.date,
       authors: ["Seven Cuts Media"],
-      url: `https://sevencutsmedia.com/articles/${resolvedParams.slug}`,
+      url: `https://www.sevencutsmedia.com/articles/${resolvedParams.slug}`,
       siteName: "Seven Cuts Media",
     },
     twitter: {
@@ -148,20 +148,20 @@ export default async function ArticlePage({ params }: Props) {
     author: [{
       "@type": "Organization",
       name: "Seven Cuts Media",
-      url: "https://sevencutsmedia.com"
+      url: "https://www.sevencutsmedia.com"
     }],
     publisher: {
       "@type": "Organization",
       name: "Seven Cuts Media",
-      url: "https://sevencutsmedia.com",
+      url: "https://www.sevencutsmedia.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://sevencutsmedia.com/logo.png"
+        url: "https://www.sevencutsmedia.com/logo.png"
       }
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://sevencutsmedia.com/articles/${resolvedParams.slug}`
+      "@id": `https://www.sevencutsmedia.com/articles/${resolvedParams.slug}`
     }
   };
 

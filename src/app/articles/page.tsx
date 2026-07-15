@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Short Form Video Articles & Insights | Seven Cuts Media",
   description: "Expert strategies, tips, and insights on short form video content, TikTok growth, YouTube Shorts, and viral marketing from Seven Cuts Media, the short form content agency.",
   alternates: {
-    canonical: "https://sevencutsmedia.com/articles",
+    canonical: "https://www.sevencutsmedia.com/articles",
   },
 };
 

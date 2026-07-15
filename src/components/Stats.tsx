@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 
 const STATS = [
-  { value: "20+", label: "Clients Managed" },
-  { value: "500+", label: "Videos Produced" },
+  { value: "50+", label: "Clients Managed" },
+  { value: "1000+", label: "Videos Produced" },
   { value: "1M+", label: "Views Generated" },
 ];
 
