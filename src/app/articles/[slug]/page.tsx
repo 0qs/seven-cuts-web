@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 
@@ -138,32 +138,57 @@ export default async function ArticlePage({ params }: Props) {
   }
 
   // JSON-LD structured data for the article
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: article.title,
-    description: article.description,
-    datePublished: article.date,
-    dateModified: article.date,
-    author: [{
-      "@type": "Organization",
-      name: "Seven Cuts Media",
-      url: "https://www.sevencutsmedia.com"
-    }],
-    publisher: {
-      "@type": "Organization",
-      name: "Seven Cuts Media",
-      url: "https://www.sevencutsmedia.com",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://www.sevencutsmedia.com/logo.png"
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: article.title,
+      description: article.description,
+      datePublished: article.date,
+      dateModified: article.date,
+      author: [{
+        "@type": "Organization",
+        name: "Seven Cuts Media",
+        url: "https://www.sevencutsmedia.com"
+      }],
+      publisher: {
+        "@type": "Organization",
+        name: "Seven Cuts Media",
+        url: "https://www.sevencutsmedia.com",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://www.sevencutsmedia.com/logo.png"
+        }
+      },
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": `https://www.sevencutsmedia.com/articles/${resolvedParams.slug}`
       }
     },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `https://www.sevencutsmedia.com/articles/${resolvedParams.slug}`
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://www.sevencutsmedia.com"
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Articles",
+          item: "https://www.sevencutsmedia.com/articles"
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: article.title
+        }
+      ]
     }
-  };
+  ];
 
   return (
     <main className="relative min-h-screen bg-[#080808] pt-32 pb-24 px-6 md:px-12">
@@ -173,9 +198,21 @@ export default async function ArticlePage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <article className="max-w-3xl mx-auto">
-        <Link href="/articles" className="inline-flex items-center gap-2 text-sm font-medium text-zinc-400 hover:text-white mb-12 transition-colors">
-          <ArrowLeft className="w-4 h-4" /> Back to Articles
-        </Link>
+        <nav aria-label="Breadcrumb" className="mb-12">
+          <ol className="flex flex-wrap items-center gap-2 text-sm font-medium text-zinc-500">
+            <li>
+              <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            </li>
+            <li aria-hidden="true">/</li>
+            <li>
+              <Link href="/articles" className="hover:text-white transition-colors">Articles</Link>
+            </li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page" className="text-zinc-300">
+              {article.title}
+            </li>
+          </ol>
+        </nav>
 
         <header className="mb-12">
           <div className="flex items-center gap-4 text-zinc-500 text-sm mb-6">
