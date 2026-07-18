@@ -9,20 +9,20 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Short Form Content Agency | Seven Cuts Media",
-  description: "Seven Cuts Media is a premier short form content agency helping creators and brands achieve explosive organic growth through high-retention video content. Based in Indonesia, serving clients worldwide.",
+  title: "Short Form Content Agency | Sevencuts",
+  description: "Sevencuts is a premier short form content agency helping creators and brands achieve explosive organic growth through high-retention video content. Based in Indonesia, serving clients worldwide.",
   keywords: ["short form content agency", "short form video", "seven cuts", "seven cuts media", "sevencuts", "sevencuts media", "tiktok agency", "reels agency", "content creation", "viral videos"],
   openGraph: {
-    title: "Short Form Content Agency | Seven Cuts Media",
-    description: "Seven Cuts Media is a premier short form content agency helping creators and brands achieve explosive organic growth through high-retention short form video content.",
+    title: "Short Form Content Agency | Sevencuts",
+    description: "Sevencuts is a premier short form content agency helping creators and brands achieve explosive organic growth through high-retention short form video content.",
     url: "https://www.sevencutsmedia.com",
-    siteName: "Seven Cuts Media",
+    siteName: "Sevencuts",
     images: [
       {
         url: "https://www.sevencutsmedia.com/logo.png",
         width: 1200,
         height: 630,
-        alt: "Seven Cuts Media, Short Form Content Agency",
+        alt: "Sevencuts, Short Form Content Agency",
       },
     ],
     locale: "en_US",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Short Form Content Agency | Seven Cuts Media",
+    title: "Short Form Content Agency | Sevencuts",
     description: "The premier short form content agency driving organic growth and viral success for creators and brands worldwide.",
     images: ["https://www.sevencutsmedia.com/logo.png"],
   },
@@ -54,8 +54,9 @@ export default function RootLayout({
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
-      "name": "Seven Cuts Media",
-      "alternateName": ["SevenCuts Media", "7 Cuts Media", "Sevencuts", "Sevencuts Media"],
+      "name": "Sevencuts",
+      "legalName": "PT. KHAPATARA",
+      "alternateName": ["Seven Cuts Media", "SevenCuts Media", "7 Cuts Media", "Sevencuts Media"],
       "description": "The premier short form content agency driving organic growth and viral success for creators and brands worldwide.",
       "serviceType": "Short Form Content Agency",
       "url": "https://www.sevencutsmedia.com",
@@ -63,6 +64,10 @@ export default function RootLayout({
       "foundingLocation": {
         "@type": "Place",
         "name": "Indonesia"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ID"
       },
       "sameAs": [
         "https://www.linkedin.com/company/sevencutsmedia/",
@@ -98,7 +103,7 @@ export default function RootLayout({
           "name": "What is a short form content agency?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A short form content agency is a specialist creative partner that handles strategy, editing, and distribution of short-form video content, typically under 60 seconds, for TikTok, Instagram Reels, and YouTube Shorts. Seven Cuts Media is a short form content agency that covers everything from content ideation to publishing and performance optimization."
+            "text": "A short form content agency is a specialist creative partner that handles strategy, editing, and distribution of short-form video content, typically under 60 seconds, for TikTok, Instagram Reels, and YouTube Shorts. Sevencuts is a short form content agency that covers everything from content ideation to publishing and performance optimization."
           }
         },
         {
@@ -106,31 +111,31 @@ export default function RootLayout({
           "name": "How much does a short form content agency cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Pricing for a short form content agency varies based on output volume, platform count, and editing complexity. Most agencies charge between $1,000 and $10,000+ per month. Seven Cuts Media offers flexible packages, contact us for a custom quote tailored to your goals."
+            "text": "Pricing for a short form content agency varies based on output volume, platform count, and editing complexity. Most agencies charge between $1,000 and $10,000+ per month. Sevencuts offers flexible packages, contact us for a custom quote tailored to your goals."
           }
         },
         {
           "@type": "Question",
-          "name": "Why hire Seven Cuts Media as your short form content agency?",
+          "name": "Why hire Sevencuts as your short form content agency?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Seven Cuts Media brings proven expertise in high-retention short form video editing, trend-driven content strategy, and multi-platform distribution. Our team has managed numerous creators and brands, consistently delivering organic growth results across TikTok, Instagram Reels, and YouTube Shorts."
+            "text": "Sevencuts brings proven expertise in high-retention short form video editing, trend-driven content strategy, and multi-platform distribution. Our team has managed numerous creators and brands, consistently delivering organic growth results across TikTok, Instagram Reels, and YouTube Shorts."
           }
         },
         {
           "@type": "Question",
-          "name": "What platforms does Seven Cuts Media cover?",
+          "name": "What platforms does Sevencuts cover?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "As a full-service short form content agency, Seven Cuts Media creates and distributes content for TikTok, Instagram Reels, YouTube Shorts, and other short-form platforms, scheduling posts at optimal times for maximum organic reach."
+            "text": "As a full-service short form content agency, Sevencuts creates and distributes content for TikTok, Instagram Reels, YouTube Shorts, and other short-form platforms, scheduling posts at optimal times for maximum organic reach."
           }
         },
         {
           "@type": "Question",
-          "name": "How do I get started with Seven Cuts Media?",
+          "name": "How do I get started with Sevencuts?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Getting started is simple. Contact Seven Cuts Media through our website at sevencutsmedia.com. We'll schedule a briefing call to understand your brand, audience, and goals, then build a custom short form video strategy for you."
+            "text": "Getting started is simple. Contact Sevencuts through our website at sevencutsmedia.com. We'll schedule a briefing call to understand your brand, audience, and goals, then build a custom short form video strategy for you."
           }
         }
       ]

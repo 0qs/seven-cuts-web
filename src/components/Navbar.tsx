@@ -22,10 +22,10 @@ export default function Navbar({ onHome = false }: { onHome?: boolean }) {
 
   return (
     <div className="absolute top-0 left-0 right-0 px-6 md:px-12 lg:px-20 py-6 flex items-center justify-between z-30">
-      <Link href="/" aria-label="Seven Cuts Media home" onClick={close}>
+      <Link href="/" aria-label="Sevencuts home" onClick={close}>
         <Image
           src="/logo.png"
-          alt="Seven Cuts Media"
+          alt="Sevencuts"
           width={120}
           height={40}
           className="object-contain brightness-0 invert"

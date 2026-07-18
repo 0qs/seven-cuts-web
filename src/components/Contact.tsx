@@ -41,11 +41,11 @@ export default function Contact() {
 
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/5 text-sm text-zinc-600">
           <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
-            <p>© {new Date().getFullYear()} Seven Cuts Media. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} PT. KHAPATARA. All rights reserved.</p>
             <span className="hidden md:block text-zinc-700">·</span>
             <span className="flex items-center gap-1.5">
               <MapPin className="w-3.5 h-3.5 flex-shrink-0" />
-              Apt Cinere Resort, Kintamani 10th Floor
+              Apt Cinere Resort, Kintamani 10th Floor, Indonesia
             </span>
           </div>
           <div className="flex gap-6 mt-4 md:mt-0">

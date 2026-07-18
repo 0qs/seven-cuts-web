@@ -62,7 +62,7 @@ function VideoCard({ src, index }: { src: string; index: number }) {
           loop
           playsInline
           preload="metadata"
-          aria-label={`Seven Cuts Media short form video portfolio example ${index + 1}`}
+          aria-label={`Sevencuts short form video portfolio example ${index + 1}`}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
       </div>

@@ -12,7 +12,7 @@ export default function FeaturedVideo() {
         loop
         playsInline
         preload="auto"
-        aria-label="Seven Cuts Media featured short form video showcase"
+        aria-label="Sevencuts featured short form video showcase"
         className="absolute inset-0 w-full h-full object-cover"
       />
 

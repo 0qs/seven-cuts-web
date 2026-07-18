@@ -4,8 +4,8 @@ import { ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  title: "Short Form Video Articles & Insights | Seven Cuts Media",
-  description: "Expert strategies, tips, and insights on short form video content, TikTok growth, YouTube Shorts, and viral marketing from Seven Cuts Media, the short form content agency.",
+  title: "Short Form Video Articles & Insights | Sevencuts",
+  description: "Expert strategies, tips, and insights on short form video content, TikTok growth, YouTube Shorts, and viral marketing from Sevencuts, the short form content agency.",
   alternates: {
     canonical: "https://www.sevencutsmedia.com/articles",
   },
@@ -44,7 +44,7 @@ export default function ArticlesPage() {
         <header className="mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Short Form Video Articles &amp; Insights</h1>
           <p className="text-lg text-zinc-400">
-            Expert strategies, tips, and insights on short form video content, TikTok growth, YouTube Shorts, and viral marketing, from Seven Cuts Media, the short form content agency.
+            Expert strategies, tips, and insights on short form video content, TikTok growth, YouTube Shorts, and viral marketing, from Sevencuts, the short form content agency.
           </p>
         </header>
 
@@ -74,7 +74,7 @@ export default function ArticlesPage() {
             href="/#contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-zinc-100 transition-all"
           >
-            Work With Seven Cuts Media <ArrowRight className="w-4 h-4" />
+            Work With Sevencuts <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>
