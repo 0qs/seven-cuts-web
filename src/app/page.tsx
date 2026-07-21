@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import FeaturedVideo from "@/components/FeaturedVideo";
 import Stats from "@/components/Stats";
+import ClientMap from "@/components/ClientMap";
 import WhyUs from "@/components/WhyUs";
 import Growth from "@/components/Growth";
 import Projects from "@/components/Projects";
@@ -15,6 +16,7 @@ export default function Home() {
       <FeaturedVideo />
       <Stats />
       <WhyUs />
+      <ClientMap />
       <Growth />
       <Projects />
       <Process />
