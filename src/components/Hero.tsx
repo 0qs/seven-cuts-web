@@ -23,7 +23,7 @@ export default function Hero() {
           className="space-y-8"
         >
           <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white leading-[1.05] sm:leading-[1.02] text-balance">
-            World-Class Marketing.{" "}
+            World-Class Marketing Services.{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500">
               Trusted Growth Partner.
             </span>
