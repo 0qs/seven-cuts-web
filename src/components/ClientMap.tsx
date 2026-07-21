@@ -153,26 +153,37 @@ function isLand(lon: number, lat: number) {
 
 /* ------------------------------------------------------------------ */
 /*  Client locations — real coordinates [lon, lat].                    */
-/*  20 dots total: Java 20%, Bali 10%, Europe 20%, US 20%, AUS 30%.    */
 /* ------------------------------------------------------------------ */
 const CLIENTS: [number, number][] = [
-  // Java, Indonesia (4 = 20%)
+  // Java, Indonesia
   [106.8, -6.2], [107.6, -6.9], [110.4, -7.0], [112.7, -7.2],
-  // Bali (2 = 10%)
-  [115.2, -8.65], [115.26, -8.5],
-  // Europe (4 = 20%)
+  [110.4, -7.8], [112.6, -7.98], [108.55, -6.7], [106.8, -6.6],
+  // Bali
+  [115.2, -8.65], [115.26, -8.5], [115.13, -8.65], [115.27, -8.7],
+  // Southeast Asia
+  [103.8, 1.35], [101.7, 3.14], [100.5, 13.75], [120.98, 14.6], [106.7, 10.78],
+  // Europe
   [-0.1, 51.5], [2.3, 48.8], [13.4, 52.5], [-3.7, 40.4],
-  // United States (4 = 20%)
+  [12.5, 41.9], [4.9, 52.4], [21.0, 52.2], [-9.1, 38.7],
+  // Russia
+  [37.6, 55.75], [30.3, 59.93], [82.9, 55.03],
+  // United States
   [-74.0, 40.7], [-118.2, 34.0], [-87.6, 41.8], [-80.2, 25.8],
-  // Australia (6 = 30%)
+  [-122.3, 47.6], [-97.7, 30.3], [-104.99, 39.7], [-71.06, 42.36],
+  // South America
+  [-46.6, -23.55], [-58.4, -34.6], [-74.1, 4.6], [-77.0, -12.05],
+  // South Africa
+  [28.05, -26.2],
+  // Australia
   [151.2, -33.9], [145.0, -37.8], [153.0, -27.5], [115.9, -31.9],
-  [138.6, -34.9], [153.4, -28.0],
+  [138.6, -34.9], [153.4, -28.0], [149.1, -35.3], [147.3, -42.9],
+  [151.75, -32.9], [130.85, -12.46], [150.9, -34.4], [153.1, -26.65],
 ];
 
 export default function ClientMap() {
   const landDots = useMemo(() => {
     const dots: { x: number; y: number }[] = [];
-    const step = 9; // px between dots
+    const step = 5; // px between dots
     for (let px = 0; px <= W; px += step) {
       for (let py = 0; py <= H; py += step) {
         const lon = (px / W) * (LON_MAX - LON_MIN) + LON_MIN;
@@ -196,16 +207,16 @@ export default function ClientMap() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center space-y-4"
+          className="text-left space-y-4"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white">
-            Specific Target{" "}
+            We Help You Target the{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500">
-              Region &amp; Niche
+              Right Region and Niche.
             </span>
           </h2>
-          <p className="text-lg text-zinc-400 max-w-xl mx-auto leading-relaxed">
-            We tailor every strategy to your exact region and niche, not a one-size-fits-all approach.
+          <p className="text-lg text-zinc-400 max-w-2xl leading-relaxed">
+            We help you find your audience, targeted to your specific region and niche.
           </p>
         </motion.div>
 
@@ -221,6 +232,14 @@ export default function ClientMap() {
             role="img"
             aria-label="World map showing the locations of our clients"
           >
+            <defs>
+              <radialGradient id="dotGlowGradient" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stopColor="#fdba74" stopOpacity={0.55} />
+                <stop offset="45%" stopColor="#fb923c" stopOpacity={0.18} />
+                <stop offset="100%" stopColor="#fb923c" stopOpacity={0} />
+              </radialGradient>
+            </defs>
+
             {/* Land dots (halftone continents) */}
             <g fill="#ffffff" opacity={0.1}>
               {landDots.map((d, i) => (
@@ -231,15 +250,31 @@ export default function ClientMap() {
             {/* Client locations */}
             {clientDots.map((d, i) => (
               <g key={`c-${i}`}>
-                {/* soft static glow */}
-                <circle cx={d.x} cy={d.y} r={7} fill="#fb923c" opacity={0.18} />
+                {/* soft glow field */}
+                <circle cx={d.x} cy={d.y} r={13} fill="url(#dotGlowGradient)" />
+                {/* glow core — same glow recipe as the Contact Us button, toned down */}
+                <motion.circle
+                  cx={d.x}
+                  cy={d.y}
+                  r={5}
+                  fill="#fb923c"
+                  opacity={0.5}
+                  style={{
+                    filter: "drop-shadow(0 0 14px rgba(251,146,60,0.3))",
+                  }}
+                  whileHover={{
+                    scale: 1.3,
+                    filter: "drop-shadow(0 0 22px rgba(251,146,60,0.45))",
+                  }}
+                  transition={{ duration: 0.3 }}
+                />
                 {/* animated pulse ring */}
                 <motion.circle
                   cx={d.x}
                   cy={d.y}
                   fill="#fb923c"
-                  initial={{ r: 3, opacity: 0.5 }}
-                  animate={{ r: [3, 11], opacity: [0.5, 0] }}
+                  initial={{ r: 4, opacity: 0.4 }}
+                  animate={{ r: [4, 10], opacity: [0.4, 0] }}
                   transition={{
                     duration: 2.4,
                     repeat: Infinity,
@@ -248,8 +283,8 @@ export default function ClientMap() {
                   }}
                 />
                 {/* core dot */}
-                <circle cx={d.x} cy={d.y} r={3} fill="#fb923c" />
-                <circle cx={d.x} cy={d.y} r={1.3} fill="#fff7ed" />
+                <circle cx={d.x} cy={d.y} r={3.2} fill="#fdba74" />
+                <circle cx={d.x} cy={d.y} r={1.4} fill="#fff7ed" />
               </g>
             ))}
           </svg>

@@ -5,26 +5,40 @@ import { Check, ArrowRight, Sparkles } from "lucide-react";
 
 const SHARED_FEATURES = [
   "Content calendar",
-  "Proven viral video structure",
+  "Script writing",
   "Fine-tuned editing",
-  "Publishing for specific target region & niche",
 ];
 
 const PLANS = [
   {
     name: "Starter",
-    price: "$1,000",
-    subtitle: "15 videos / month",
-    features: SHARED_FEATURES,
+    price: "$1,350",
+    subtitle: "30 content pieces / month",
+    features: [
+      "7 talking-head reels",
+      "18 info text reels",
+      "5 carousel posts",
+      ...SHARED_FEATURES,
+    ],
     highlight: false,
     custom: false,
     cta: "Get started",
   },
   {
     name: "Growth",
-    price: "$1,350",
-    subtitle: "Up to 30 videos / month",
-    features: [...SHARED_FEATURES, "24/7 marketing consulting"],
+    price: "$1,800",
+    subtitle: "46 content pieces / month",
+    badge: "Best Value",
+    features: [
+      "10 talking-head reels",
+      "30 info text reels",
+      "6 carousel posts",
+      ...SHARED_FEATURES,
+      "Publishing for target region & niche",
+      "Dedicated iPhone for publishing",
+      "Growth strategy",
+      "24/7 marketing consulting",
+    ],
     highlight: true,
     custom: false,
     cta: "Get started",
@@ -81,7 +95,7 @@ export default function Pricing() {
             >
               {plan.highlight && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-orange-500 to-purple-600 text-white text-xs font-semibold tracking-wide shadow-lg">
-                  Most popular
+                  {plan.badge ?? "Most popular"}
                 </div>
               )}
 
