@@ -99,13 +99,15 @@ export default function Pricing() {
           className="mb-16"
         >
           <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500 mb-4">Pricing</p>
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-white">Simple pricing.</h2>
-            <p className="text-zinc-500 max-w-sm">No hidden fees. Pick the plan that fits your growth stage.</p>
-          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white">
+            Find the Plan That{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500">
+              Fits You Best.
+            </span>
+          </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 md:gap-4 items-start">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-4 items-stretch">
           {PLANS.map((plan, index) => {
             const features = planFeatures(plan.key);
             return (

@@ -210,9 +210,9 @@ export default function ClientMap() {
           className="text-left space-y-4"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white">
-            We Help You Target the{" "}
+            Global Reach.{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500">
-              Right Region and Niche.
+              Local Precision.
             </span>
           </h2>
           <p className="text-lg text-zinc-400 max-w-2xl leading-relaxed">

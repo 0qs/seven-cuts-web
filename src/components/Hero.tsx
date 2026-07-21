@@ -22,9 +22,9 @@ export default function Hero() {
           transition={{ duration: 0.9, ease: "easeOut" }}
           className="space-y-8"
         >
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white leading-[1.05] sm:leading-[1.02] text-balance">
-            World-Class Marketing Services.{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white leading-[1.05] sm:leading-[1.02]">
+            <span className="text-balance">World-Class Marketing Services.</span>{" "}
+            <span className="whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-500">
               Trusted Growth Partner.
             </span>
           </h1>
