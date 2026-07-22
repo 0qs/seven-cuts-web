@@ -53,7 +53,7 @@ const ROWS: {
   custom: boolean | string;
 }[] = [
   { label: "content pieces / month", starter: "30", growth: "46", custom: "Flexible" },
-  { label: "posting frequency", starter: "1/day", growth: "2-3/day", custom: "Flexible" },
+  { label: "", starter: "1 post / day", growth: "2-3 posts / day", custom: "Flexible posting" },
   { label: "talking-head reels", starter: "7", growth: "10", custom: "Flexible" },
   { label: "info text reels", starter: "18", growth: "30", custom: "Flexible" },
   { label: "carousel posts", starter: "5", growth: "6", custom: "Flexible" },
