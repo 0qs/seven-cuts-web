@@ -31,7 +31,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-lg md:text-xl text-zinc-400 max-w-xl mx-auto leading-relaxed">
-            Sevencuts, driving organic growth and viral success through high-retention short form video.
+            Driving organic growth and viral success through high-retention short form video.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-2 justify-center">

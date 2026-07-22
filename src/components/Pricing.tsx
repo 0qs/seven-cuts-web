@@ -28,7 +28,7 @@ const PLANS: {
     key: "growth",
     name: "Growth",
     price: "$1,800",
-    subtitle: "For scaling fast",
+    subtitle: "Explosive Marketing",
     highlight: true,
     custom: false,
     badge: "⭐ Best Value",
@@ -53,6 +53,7 @@ const ROWS: {
   custom: boolean | string;
 }[] = [
   { label: "content pieces / month", starter: "30", growth: "46", custom: "Flexible" },
+  { label: "posting frequency", starter: "1/day", growth: "2-3/day", custom: "Flexible" },
   { label: "talking-head reels", starter: "7", growth: "10", custom: "Flexible" },
   { label: "info text reels", starter: "18", growth: "30", custom: "Flexible" },
   { label: "carousel posts", starter: "5", growth: "6", custom: "Flexible" },
