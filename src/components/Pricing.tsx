@@ -9,6 +9,7 @@ const PLANS: {
   key: PlanKey;
   name: string;
   price: string;
+  frequency: string;
   subtitle: string;
   highlight: boolean;
   custom: boolean;
@@ -18,7 +19,8 @@ const PLANS: {
   {
     key: "starter",
     name: "Starter",
-    price: "$1,350",
+    price: "$1,750",
+    frequency: "1 post / day",
     subtitle: "For getting started",
     highlight: false,
     custom: false,
@@ -27,7 +29,8 @@ const PLANS: {
   {
     key: "growth",
     name: "Growth",
-    price: "$1,800",
+    price: "$2,500",
+    frequency: "2-3 posts / day",
     subtitle: "Explosive Marketing",
     highlight: true,
     custom: false,
@@ -38,6 +41,7 @@ const PLANS: {
     key: "custom",
     name: "Custom",
     price: "Let's talk",
+    frequency: "Flexible posting",
     subtitle: "Tailored to you",
     highlight: false,
     custom: true,
@@ -53,7 +57,6 @@ const ROWS: {
   custom: boolean | string;
 }[] = [
   { label: "content pieces / month", starter: "30", growth: "46", custom: "Flexible" },
-  { label: "", starter: "1 post / day", growth: "2-3 posts / day", custom: "Flexible posting" },
   { label: "talking-head reels", starter: "7", growth: "10", custom: "Flexible" },
   { label: "info text reels", starter: "18", growth: "30", custom: "Flexible" },
   { label: "carousel posts", starter: "5", growth: "6", custom: "Flexible" },
@@ -156,6 +159,12 @@ export default function Pricing() {
                   <p className="text-sm text-zinc-500">
                     {plan.subtitle}
                   </p>
+                  <div className={`mt-3! flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold ${plan.highlight
+                      ? "bg-gradient-to-r from-orange-500/10 to-purple-500/10 text-zinc-800"
+                      : "bg-gradient-to-r from-orange-500/10 to-purple-500/10 text-zinc-200 border border-white/10"
+                    }`}>
+                    {plan.frequency}
+                  </div>
                 </div>
 
                 <ul className="space-y-2.5 flex-1">
