@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Users, TrendingUp, Star, Zap, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { Users, TrendingUp, Star, Zap } from "lucide-react";
 
 const REASONS = [
   {
@@ -115,23 +114,6 @@ export default function WhyUs() {
             );
           })}
         </div>
-
-        {/* Internal link to articles */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="pt-4"
-        >
-          <Link
-            href="/articles"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-400 hover:text-white transition-colors group"
-          >
-            Read our short form video insights
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </Link>
-        </motion.div>
 
       </div>
     </section>

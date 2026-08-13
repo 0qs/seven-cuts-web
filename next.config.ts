@@ -6,6 +6,14 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "images.unsplash.com" },
     ],
   },
+  // The /articles section was removed. These URLs are still in Google's index,
+  // so redirect them permanently to the home page instead of serving 404s.
+  async redirects() {
+    return [
+      { source: "/articles", destination: "/", permanent: true },
+      { source: "/articles/:slug", destination: "/", permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

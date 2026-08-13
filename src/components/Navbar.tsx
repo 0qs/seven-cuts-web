@@ -44,9 +44,6 @@ export default function Navbar({ onHome = false }: { onHome?: boolean }) {
             {section.label}
           </a>
         ))}
-        <Link href="/articles" className="hover:text-white transition-colors">
-          Articles
-        </Link>
         <a
           href={sectionHref("contact")}
           className="px-5 py-2.5 bg-white text-black text-sm font-semibold rounded-full hover:bg-zinc-100 transition-colors"
@@ -80,13 +77,6 @@ export default function Navbar({ onHome = false }: { onHome?: boolean }) {
                 {section.label}
               </a>
             ))}
-            <Link
-              href="/articles"
-              onClick={close}
-              className="px-4 py-3 rounded-xl text-sm text-zinc-300 hover:bg-white/5 hover:text-white transition-colors"
-            >
-              Articles
-            </Link>
             <a
               href={sectionHref("contact")}
               onClick={close}
